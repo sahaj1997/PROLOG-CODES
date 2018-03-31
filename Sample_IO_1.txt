@@ -1,0 +1,38 @@
+A). Simplifying Exp:
+
+# Test Input 1:
+
+1 ?- simplifyExp(x,X).
+X = x.
+
+# Test Input 2:
+
+2 ?- simplifyExp(y+0,X).
+X=y .
+
+3 ?- simplifyExp(2+3,X).
+X=5.
+
+4 ?- simplifyExp(x+2*x+3*x+4*x,X).
+X=10x.
+
+5 ?- simplifyExp(x-5*x+5*x,X).
+X=x
+
+6 ?- simplifyExp(x^2-x^2,X).
+X =0.
+
+7 ?- simplifyExp(x/x/x,X).
+X = 1/x.
+
+8 ?- simplifyExp(5*x-(3*x/x),X).
+X= 5*x-3.
+
+B).Comparing two exp:
+
+1 ?- equals(5*x-3*x,-3x+5*x).
+true.
+
+2 ?- equals(2*x, 1/x).
+false.
+
